@@ -142,7 +142,7 @@ def main():
         jenkins_home_dir, 'jenkins.model.JenkinsLocationConfiguration.xml'),
         jenkins_root_url)
 
-    populate_known_hosts(ssh_known_hosts, '/etc/ssh/ssh_known_hosts')
+    # populate_known_hosts(ssh_known_hosts, '/etc/ssh/ssh_known_hosts')
 
     # nginx changes here are really "run once". The context should never
     # change as long as a Jenkins instance is alive, since the rewrite will
