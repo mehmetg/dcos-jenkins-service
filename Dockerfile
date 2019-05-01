@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.150.1
+FROM jenkins/jenkins:2.150.2
 WORKDIR /tmp
 
 # Environment variables used throughout this Dockerfile
@@ -85,7 +85,7 @@ RUN chmod -R ugo+rw "$JENKINS_HOME" "${JENKINS_FOLDER}" \
     && chmod -R ugo+rw /var/lib/nginx/ /var/nginx/ /var/log/nginx \
     && chmod ugo+rx /usr/local/jenkins/bin/*
 
-USER ${user}
+# USER ${user}
 
 # disable first-run wizard
 RUN echo 2.0 > /usr/share/jenkins/ref/jenkins.install.UpgradeWizard.state
